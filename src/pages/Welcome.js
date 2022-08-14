@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import "./Welcome.css";
-import Button from "../components/Button";
-import Input from "../components/Input";
+import Button from "../components/Button/Button";
+import Input from "../components/Input/Input";
 import Output from "../components/Output/Output";
 
 const Welcome = () => {
@@ -39,6 +39,7 @@ const Welcome = () => {
         <h1 className="col-md-12 d-flex justify-content-center">
           Welcome Page
         </h1>
+        <hr />
         <div className="col-md-6">
           <Input funCall={getFname} label="First Name" />
         </div>
