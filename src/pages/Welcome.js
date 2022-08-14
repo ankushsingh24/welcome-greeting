@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./Welcome.css";
 import Button from "../components/Button";
 import Input from "../components/Input";
-import Output from "../components/Output";
+import Output from "../components/Output/Output";
 
 const Welcome = () => {
   let [Fname, setFname] = useState("");
