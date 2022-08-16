@@ -12,10 +12,12 @@ const Welcome = () => {
   let [fullName, setfullName] = useState("");
 
   const getFname = (e) => {
+    // e.preventDefault();
     setFname(e.target.value);
   };
 
   const getLname = (e) => {
+    // e.preventDefault();
     setLname(e.target.value);
   };
 
@@ -23,11 +25,13 @@ const Welcome = () => {
   //   setTemplate("Welcome to my Website ");
   // };
 
-  const display = () => {
+  const display = (e) => {
+    // e.preventDefault();
     setfullName(`Hello ${Fname} ${Lname} !!! Welcome to my Website`);
   };
 
-  const clear = () => {
+  const clear = (e) => {
+    // e.preventDefault();
     setFname("");
     setLname("");
     setfullName("");
@@ -35,16 +39,16 @@ const Welcome = () => {
 
   return (
     <div className="container mt-5">
-      <form action="#" className="row g-3">
+      <form action="" className="row g-3">
         <h1 className="col-md-12 d-flex justify-content-center">
           Welcome Page
         </h1>
         <hr />
         <div className="col-md-6">
-          <Input funCall={getFname} label="First Name" />
+          <Input funCall={getFname} label="First Name" val={Fname} />
         </div>
         <div className="col-md-6">
-          <Input funCall={getLname} label="Last Name" />
+          <Input funCall={getLname} label="Last Name" val={Lname} />
         </div>
 
         <div className="d-flex gap-2 d-md-flex">
